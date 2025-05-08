@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Local</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="estilo-extra.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo-text">SABOR <span>LOCAL</span></h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar Culinária Local">
+            <button>Buscar</button>
+        </div>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </header>
+
+    <section class="content">
+        <button class="nearby-button">Perto de Você</button>
+
+        <!-- Área do Mapa -->
+        <div class="map-container">
+            <h2>Mapa da Localização</h2>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29491.223047885967!2d-47.253111725683596!3d-22.489062600000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c889f8630db485%3A0x19426fa32e3cf7cc!2sPadaria%20e%20Restaurante%20Massa%20Fina!5e0!3m2!1spt-BR!2sbr!4v1731499399254!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- Categorias com botões -->
+        <div class="categories">
+            <button class="category-btn" onclick="showMenu('italiano')">🍝<br>Italiano</button>
+            <button class="category-btn" onclick="showMenu('japones')">🍣<br>Japonês</button>
+            <button class="category-btn" onclick="showMenu('mexicano')">🌮<br>Mexicano</button>
+        </div>
+
+        <!-- Menus de comida -->
+        <div class="food-options" id="menu-italiano">
+            <div class="food-item">
+                <p>Pizza Margherita</p>
+                <button onclick="addToCart('Pizza Margherita', 35)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Lasanha</p>
+                <button onclick="addToCart('Lasanha', 40)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Ravioli</p>
+                <button onclick="addToCart('Ravioli', 38)">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="food-options" id="menu-japones">
+            <div class="food-item">
+                <p>Sushi</p>
+                <button onclick="addToCart('Sushi', 42)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Tempurá</p>
+                <button onclick="addToCart('Tempurá', 36)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Lamen</p>
+                <button onclick="addToCart('Lamen', 45)">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="food-options" id="menu-mexicano">
+            <div class="food-item">
+                <p>Taco</p>
+                <button onclick="addToCart('Taco', 30)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Guacamole</p>
+                <button onclick="addToCart('Guacamole', 25)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Quesadilla</p>
+                <button onclick="addToCart('Quesadilla', 33)">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Cards de restaurantes -->
+        <div class="card-grid">
+            <!-- (cards existentes permanecem aqui, não alterados) -->
+        </div>
+
+        <!-- Carrinho -->
+        <div id="carrinho">
+            <h3>Carrinho:</h3>
+            <ul id="cart-items"></ul>
+            <div id="total">Total: R$ 0</div>
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

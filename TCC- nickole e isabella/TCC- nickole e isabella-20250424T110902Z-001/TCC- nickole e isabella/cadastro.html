@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro - Sabor Local</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sabor Local</h1>
+        
+        <div class="form-container">
+            <!-- Formulário de Login -->
+            <form id="login-form" class="form active" onsubmit="login(event)">
+                <h2>Login</h2>
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" name="login-email" required>
+                
+                <label for="login-password">Senha</label>
+                <input type="password" id="login-password" name="login-password" required>
+                
+                <button type="submit" class="btn">Entrar</button>
+                <p>Não tem conta? <span onclick="showRegister()">Cadastre-se</span></p>
+            </form>
+
+            <!-- Formulário de Cadastro -->
+            <form id="register-form" class="form" onsubmit="signup(event)">
+                <h2>Cadastro</h2>
+                <label for="register-name">Nome Completo</label>
+                <input type="text" id="register-name" name="register-name" required>
+                
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" name="register-email" required>
+                
+                <label for="register-password">Senha</label>
+                <input type="password" id="register-password" name="register-password" required>
+                
+                <label for="confirm-password">Confirme a Senha</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                
+                <button type="submit" class="btn">Cadastrar</button>
+                <p>Já tem uma conta? <span onclick="showLogin()">Entrar</span></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
+

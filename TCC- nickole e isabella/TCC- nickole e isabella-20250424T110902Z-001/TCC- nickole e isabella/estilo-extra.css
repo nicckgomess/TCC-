@@ -1,0 +1,76 @@
+
+.categories {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+.category-btn {
+    background-color: #fff;
+    border: 2px solid #FC7400;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.category-btn:hover {
+    background-color: #fff3e0;
+}
+.food-options {
+    display: none;
+    margin: 10px 0;
+    text-align: center;
+}
+.food-item {
+    background-color: #fff;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.food-item button {
+    margin-top: 5px;
+    background-color: #FC7400;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#carrinho {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+#carrinho ul {
+    list-style: none;
+    padding: 0;
+}
+#carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    background: #fcf3e0;
+    padding: 8px;
+    border-radius: 5px;
+}
+.remove-btn {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+}
