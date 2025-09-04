@@ -29,3 +29,31 @@ function removeItem(button, price) {
 function updateTotal() {
     document.getElementById("total").textContent = `Total: R$ ${total}`;
 }
+
+// Abre uma nova aba com as opções de comida do menu selecionado
+function openMenuInNewTab(menuId) {
+    const menu = document.getElementById('menu-' + menuId);
+    if (!menu) return;
+    const items = menu.querySelectorAll('.food-item');
+    let html = `<h2>Opções de comida</h2><ul style='font-size:18px;'>`;
+    items.forEach(item => {
+        const p = item.querySelector('p');
+        if (p && p.textContent.trim() !== '') {
+            html += `<li>${p.textContent}</li>`;
+        }
+    });
+    html += `</ul>`;
+    const win = window.open('', '_blank');
+    win.document.write(`
+        <html>
+        <head>
+            <title>Opções de comida</title>
+            <meta charset="UTF-8">
+        </head>
+        <body style='font-family:sans-serif;padding:32px;'>
+            ${html}
+        </body>
+        </html>
+    `);
+    win.document.close();
+}

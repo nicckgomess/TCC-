@@ -33,10 +33,21 @@
             <button class="category-btn" onclick="showMenu('italiano')">🍝<br>Italiano</button>
             <button class="category-btn" onclick="showMenu('japones')">🍣<br>Japonês</button>
             <button class="category-btn" onclick="showMenu('mexicano')">🌮<br>Mexicano</button>
+            <button class="category-btn" onclick="showMenu('burguer')">🍔<br>Hamburgueria</button>
+            <button class="category-btn" onclick="showMenu('bakery')">🥐<br>Padaria</button>
+            <button class="category-btn" onclick="showMenu('sobremesa')">🍰<br>Sobremesas</button>
+            <button class="category-btn" onclick="showMenu('indiana')">🍛<br>Indiana</button>
+            <button class="category-btn" onclick="showMenu('vegan')">🥗<br>Saudável</button>
+            <button class="category-btn" onclick="showMenu('churrasco')">🥩<br>Churrasco</button>
+            <button class="category-btn" onclick="showMenu('sorveteria')">🍦<br>Sorveteria</button>
+            <button class="category-btn" onclick="showMenu('massas')">🍜<br>Massas</button>
+            <button class="category-btn" onclick="showMenu('chinesa')">🥡<br>Chinesa</button>
         </div>
 
         <!-- Menus de comida -->
+
         <div class="food-options" id="menu-italiano">
+            <button onclick="openMenuInNewTab('italiano')" class="ver-opcoes-btn">Ver opções</button>
             <div class="food-item">
                 <p>Pizza Margherita</p>
                 <button onclick="addToCart('Pizza Margherita', 35)">Adicionar</button>
@@ -49,9 +60,18 @@
                 <p>Ravioli</p>
                 <button onclick="addToCart('Ravioli', 38)">Adicionar</button>
             </div>
+            <div class="food-item">
+                <p>Focaccia</p>
+                <button onclick="addToCart('Focaccia', 22)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Risotto</p>
+                <button onclick="addToCart('Risotto', 37)">Adicionar</button>
+            </div>
         </div>
 
         <div class="food-options" id="menu-japones">
+            <button onclick="openMenuInNewTab('japones')" class="ver-opcoes-btn">Ver opções</button>
             <div class="food-item">
                 <p>Sushi</p>
                 <button onclick="addToCart('Sushi', 42)">Adicionar</button>
@@ -64,9 +84,18 @@
                 <p>Lamen</p>
                 <button onclick="addToCart('Lamen', 45)">Adicionar</button>
             </div>
+            <div class="food-item">
+                <p>Sashimi</p>
+                <button onclick="addToCart('Sashimi', 48)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Yakissoba</p>
+                <button onclick="addToCart('Yakissoba', 32)">Adicionar</button>
+            </div>
         </div>
 
         <div class="food-options" id="menu-mexicano">
+            <button onclick="openMenuInNewTab('mexicano')" class="ver-opcoes-btn">Ver opções</button>
             <div class="food-item">
                 <p>Taco</p>
                 <button onclick="addToCart('Taco', 30)">Adicionar</button>
@@ -79,11 +108,219 @@
                 <p>Quesadilla</p>
                 <button onclick="addToCart('Quesadilla', 33)">Adicionar</button>
             </div>
+            <div class="food-item">
+                <p>Nachos</p>
+                <button onclick="addToCart('Nachos', 28)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Burrito</p>
+                <button onclick="addToCart('Burrito', 36)">Adicionar</button>
+            </div>
         </div>
+
+        <div class="food-options" id="menu-bakery">
+            <button onclick="openMenuInNewTab('bakery')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item">
+                <p>Pão Francês</p>
+                <button onclick="addToCart('Pão Francês', 3)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Croissant</p>
+                <button onclick="addToCart('Croissant', 7)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Bolo de Cenoura</p>
+                <button onclick="addToCart('Bolo de Cenoura', 12)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Sonho</p>
+                <button onclick="addToCart('Sonho', 8)">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="food-options" id="menu-burguer">
+            <button onclick="openMenuInNewTab('burguer')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item">
+                <p>Cheeseburguer</p>
+                <button onclick="addToCart('Cheeseburguer', 22)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Hambúrguer Vegano</p>
+                <button onclick="addToCart('Hambúrguer Vegano', 25)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Batata Frita</p>
+                <button onclick="addToCart('Batata Frita', 10)">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="food-options" id="menu-vegan">
+            <button onclick="openMenuInNewTab('vegan')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item">
+                <p>Salada de Quinoa</p>
+                <button onclick="addToCart('Salada de Quinoa', 18)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Hambúrguer de Grão-de-bico</p>
+                <button onclick="addToCart('Hambúrguer de Grão-de-bico', 20)">Adicionar</button>
+            </div>
+            <div class="food-item">
+                <p>Wrap Vegano</p>
+                <button onclick="addToCart('Wrap Vegano', 16)">Adicionar</button>
+            </div>
+        </div>
+        .card-grid .category-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
 
         <!-- Cards de restaurantes -->
         <div class="card-grid">
-            <!-- (cards existentes permanecem aqui, não alterados) -->
+            <div class="card">
+                <img src="imagens/bbq.jpg" alt="Churrascaria" class="card-img">
+                <h3>Brasa & Sabor</h3>
+                <p>Especialidade: Carnes assadas e churrasco</p>
+                <button class="category-btn" onclick="showMenu('churrasco')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/bakery.jpg" alt="Sorveteria" class="card-img">
+                <h3>Gelato Feliz</h3>
+                <p>Especialidade: Sorvetes artesanais</p>
+                <button class="category-btn" onclick="showMenu('sorveteria')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/pasta.jpg" alt="Massas" class="card-img">
+                <h3>Casa das Massas</h3>
+                <p>Especialidade: Massas frescas</p>
+                <button class="category-btn" onclick="showMenu('massas')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/chinese.jpg" alt="Comida Chinesa" class="card-img">
+                <h3>Dragão Dourado</h3>
+                <p>Especialidade: Pratos chineses tradicionais</p>
+                <button class="category-btn" onclick="showMenu('chinesa')">Ver Menu</button>
+            </div>
+        <div class="food-options" id="menu-churrasco">
+            <button onclick="openMenuInNewTab('churrasco')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item"><p>Picanha</p><button onclick="addToCart('Picanha', 45)">Adicionar</button></div>
+            <div class="food-item"><p>Costela</p><button onclick="addToCart('Costela', 38)">Adicionar</button></div>
+            <div class="food-item"><p>Linguicinha</p><button onclick="addToCart('Linguicinha', 18)">Adicionar</button></div>
+            <div class="food-item"><p>Fraldinha</p><button onclick="addToCart('Fraldinha', 32)">Adicionar</button></div>
+        </div>
+
+        <div class="food-options" id="menu-sorveteria">
+            <button onclick="openMenuInNewTab('sorveteria')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item"><p>Sorvete de Chocolate</p><button onclick="addToCart('Sorvete de Chocolate', 8)">Adicionar</button></div>
+            <div class="food-item"><p>Sorvete de Morango</p><button onclick="addToCart('Sorvete de Morango', 8)">Adicionar</button></div>
+            <div class="food-item"><p>Sorvete de Creme</p><button onclick="addToCart('Sorvete de Creme', 8)">Adicionar</button></div>
+            <div class="food-item"><p>Picolé de Frutas</p><button onclick="addToCart('Picolé de Frutas', 6)">Adicionar</button></div>
+        </div>
+
+        <div class="food-options" id="menu-massas">
+            <button onclick="openMenuInNewTab('massas')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item"><p>Espaguete à Bolonhesa</p><button onclick="addToCart('Espaguete à Bolonhesa', 28)">Adicionar</button></div>
+            <div class="food-item"><p>Fettuccine Alfredo</p><button onclick="addToCart('Fettuccine Alfredo', 30)">Adicionar</button></div>
+            <div class="food-item"><p>Gnocchi</p><button onclick="addToCart('Gnocchi', 27)">Adicionar</button></div>
+            <div class="food-item"><p>Canelone</p><button onclick="addToCart('Canelone', 29)">Adicionar</button></div>
+        </div>
+
+        <div class="food-options" id="menu-chinesa">
+            <button onclick="openMenuInNewTab('chinesa')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item"><p>Frango Xadrez</p><button onclick="addToCart('Frango Xadrez', 26)">Adicionar</button></div>
+            <div class="food-item"><p>Yakissoba</p><button onclick="addToCart('Yakissoba', 32)">Adicionar</button></div>
+            <div class="food-item"><p>Rolinho Primavera</p><button onclick="addToCart('Rolinho Primavera', 10)">Adicionar</button></div>
+            <div class="food-item"><p>Arroz Chop Suey</p><button onclick="addToCart('Arroz Chop Suey', 18)">Adicionar</button></div>
+        </div>
+            <!-- Cards de restaurantes com imagens antigas -->
+            <div class="card">
+                <img src="imagens/pizza.jpg" alt="Restaurante Italiano" class="card-img">
+                <h3>La Trattoria Bella</h3>
+                <p>Especialidade: Massas e pizzas</p>
+                <button class="category-btn" onclick="showMenu('italiano')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/sushi.jpg" alt="Restaurante Japonês" class="card-img">
+                <h3>Sakura Sushi House</h3>
+                <p>Especialidade: Sushi e pratos orientais</p>
+                <button class="category-btn" onclick="showMenu('japones')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/mexican.jpg" alt="Restaurante Mexicano" class="card-img">
+                <h3>El Sombrero</h3>
+                <p>Especialidade: Tacos e comidas apimentadas</p>
+                <button class="category-btn" onclick="showMenu('mexicano')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/burguer.jpg" alt="Hamburgueria" class="card-img">
+                <h3>Burger Station</h3>
+                <p>Especialidade: Hambúrgueres artesanais</p>
+                <button class="category-btn" onclick="showMenu('burguer')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/bakery.jpg" alt="Padaria" class="card-img">
+                <h3>Padaria Pão Quente</h3>
+                <p>Especialidade: Pães e doces</p>
+                <button class="category-btn" onclick="showMenu('bakery')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/indian-food.jpg" alt="Comida Indiana" class="card-img">
+                <h3>Sabores da Índia</h3>
+                <p>Especialidade: Sabores exóticos e picantes</p>
+                <button class="category-btn" onclick="showMenu('indiana')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/vegan.jpg" alt="Comida Saudável" class="card-img">
+                <h3>Natureba Grill</h3>
+                <p>Especialidade: Pratos leves e naturais</p>
+                <button class="category-btn" onclick="showMenu('vegan')">Ver Menu</button>
+            </div>
+            <div class="card">
+                <img src="imagens/bakery.jpg" alt="Sobremesas" class="card-img">
+                <h3>Doce Encanto</h3>
+                <p>Especialidade: Doces e tortas</p>
+                <button class="category-btn" onclick="showMenu('sobremesa')">Ver Menu</button>
+            </div>
+        <div class="food-options" id="menu-burguer">
+            <button onclick="openMenuInNewTab('burguer')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item"><p>Cheeseburguer</p><button onclick="addToCart('Cheeseburguer', 22)">Adicionar</button></div>
+            <div class="food-item"><p>Hambúrguer Vegano</p><button onclick="addToCart('Hambúrguer Vegano', 25)">Adicionar</button></div>
+            <div class="food-item"><p>Batata Frita</p><button onclick="addToCart('Batata Frita', 10)">Adicionar</button></div>
+            <div class="food-item"><p>Onion Rings</p><button onclick="addToCart('Onion Rings', 12)">Adicionar</button></div>
+        </div>
+
+        <div class="food-options" id="menu-bakery">
+            <button onclick="openMenuInNewTab('bakery')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item"><p>Pão Francês</p><button onclick="addToCart('Pão Francês', 3)">Adicionar</button></div>
+            <div class="food-item"><p>Croissant</p><button onclick="addToCart('Croissant', 7)">Adicionar</button></div>
+            <div class="food-item"><p>Bolo de Cenoura</p><button onclick="addToCart('Bolo de Cenoura', 12)">Adicionar</button></div>
+            <div class="food-item"><p>Sonho</p><button onclick="addToCart('Sonho', 8)">Adicionar</button></div>
+        </div>
+
+        <div class="food-options" id="menu-sobremesa">
+            <button onclick="openMenuInNewTab('sobremesa')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item"><p>Pudim</p><button onclick="addToCart('Pudim', 9)">Adicionar</button></div>
+            <div class="food-item"><p>Torta de Limão</p><button onclick="addToCart('Torta de Limão', 11)">Adicionar</button></div>
+            <div class="food-item"><p>Brigadeiro</p><button onclick="addToCart('Brigadeiro', 3)">Adicionar</button></div>
+            <div class="food-item"><p>Mousse de Maracujá</p><button onclick="addToCart('Mousse de Maracujá', 8)">Adicionar</button></div>
+        </div>
+
+        <div class="food-options" id="menu-indiana">
+            <button onclick="openMenuInNewTab('indiana')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item"><p>Chicken Curry</p><button onclick="addToCart('Chicken Curry', 32)">Adicionar</button></div>
+            <div class="food-item"><p>Chana Masala</p><button onclick="addToCart('Chana Masala', 27)">Adicionar</button></div>
+            <div class="food-item"><p>Arroz Basmati</p><button onclick="addToCart('Arroz Basmati', 15)">Adicionar</button></div>
+            <div class="food-item"><p>Samosa</p><button onclick="addToCart('Samosa', 10)">Adicionar</button></div>
+        </div>
+
+        <div class="food-options" id="menu-vegan">
+            <button onclick="openMenuInNewTab('vegan')" class="ver-opcoes-btn">Ver opções</button>
+            <div class="food-item"><p>Salada de Quinoa</p><button onclick="addToCart('Salada de Quinoa', 18)">Adicionar</button></div>
+            <div class="food-item"><p>Hambúrguer de Grão-de-bico</p><button onclick="addToCart('Hambúrguer de Grão-de-bico', 20)">Adicionar</button></div>
+            <div class="food-item"><p>Wrap Vegano</p><button onclick="addToCart('Wrap Vegano', 16)">Adicionar</button></div>
+            <div class="food-item"><p>Suco Detox</p><button onclick="addToCart('Suco Detox', 8)">Adicionar</button></div>
+        </div>
         </div>
 
         <!-- Carrinho -->

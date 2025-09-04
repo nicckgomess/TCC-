@@ -1,3 +1,45 @@
+/* Centralizar botão Ver Menu */
+.category-btn, .ver-opcoes-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Estilo para os cards de restaurantes */
+.card-grid {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 32px 0;
+    flex-wrap: wrap;
+}
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 16px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+.card h3 {
+    margin: 8px 0 4px 0;
+}
+.card p {
+    margin: 0 0 12px 0;
+    color: #666;
+    font-size: 15px;
+}
 /* Estilos Globais */
 body {
     font-family: Arial, sans-serif;
